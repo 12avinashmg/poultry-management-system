@@ -25,3 +25,4 @@ dist-ssr
 includes/config.php
 .env
 includes/secret.php
+.env
