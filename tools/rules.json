@@ -1,0 +1,36 @@
+[
+    {
+        "example": "birds died yesterday",
+        "pattern": "birds died yesterday",
+        "tokens": [
+            "birds",
+            "died",
+            "yesterday"
+        ],
+        "count": 1
+    },
+    {
+        "example": "2025-05-19",
+        "pattern": "2025-05-19",
+        "tokens": [
+            "2025-05-19"
+        ],
+        "count": 1
+    },
+    {
+        "example": "user",
+        "pattern": "user",
+        "tokens": [
+            "user"
+        ],
+        "count": 1
+    },
+    {
+        "example": "eggs",
+        "pattern": "eggs",
+        "tokens": [
+            "eggs"
+        ],
+        "count": 1
+    }
+]
