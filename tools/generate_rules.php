@@ -44,6 +44,7 @@ foreach ($rows as $r) {
     ];
 }
 
+
 // Write JSON (pretty)
 $outPath = __DIR__ . '/rules.json';
 file_put_contents($outPath, json_encode($rules, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
