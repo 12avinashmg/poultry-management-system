@@ -7,6 +7,8 @@
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
+-- Updated schema for poultry management system
+
 CREATE DATABASE IF NOT EXISTS poultry_management;
 USE poultry_management;
 
