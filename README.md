@@ -111,9 +111,9 @@ poultry-management-system/
 
 ## 📸 Screenshots
 
-### 📊 Analytics
+### 📋 Admin Dashboard
 
-![Analytics](assets/screenshots/analytics.png)
+![Dashboard](assets/screenshots/dashboard.png)
 
 ### 🛡️ Biosecurity
 
@@ -123,9 +123,9 @@ poultry-management-system/
 
 ![Inventory](assets/screenshots/birds_inventory.png)
 
-### 📋 Admin Dashboard
+### 📊 Analytics
 
-![Dashboard](assets/screenshots/dashboard.png)
+![Analytics](assets/screenshots/analytics.png)
 
 ### 💰 Payroll
 
