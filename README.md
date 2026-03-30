@@ -166,7 +166,7 @@ poultry-management-system/
 
 ## 👨‍💻 Author
 
-**Avinash M G**
+**M G Avinash**
 Computer Science Engineering Student
 
 ---
