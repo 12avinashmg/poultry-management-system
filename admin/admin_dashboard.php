@@ -1,7 +1,8 @@
 <?php
 session_start();
 require_once(__DIR__ . '/../includes/database.php');
-if (!isset($_SESSION['User_ID']) || $_SESSION['Role'] !== 'admin') { header('Location: login.php'); exit(); }
+require_once(__DIR__ . '/../includes/config.php');
+if (!isset($_SESSION['User_ID']) || $_SESSION['Role'] !== 'admin') { header('Location: ../auth/login.php'); exit(); }
 
 // --- EMPLOYEE PAYROLL DATA (we keep it for later pages even if we don't show chart here) ---
 $payroll_data = $pdo->query("SELECT CONCAT(FirstName, ' ', LastName) AS name, job, Salary FROM employee")->fetchAll(PDO::FETCH_ASSOC);
@@ -247,7 +248,7 @@ $inventory_options = [
                 <a class="nav-link" href="inventory_dashboard.php">📊 Inventory Analytics</a>
                 <a class="nav-link <?= basename($_SERVER['PHP_SELF'])=='admin_biosecurity.php'?'active':'' ?>" href="admin_biosecurity.php">🦠 Biosecurity Management</a>
                 <a class="nav-link <?= basename($_SERVER['PHP_SELF'])=='admin_purchases.php'?'active':'' ?>" href="admin_purchases.php">🛒 Purchases</a>
-                <a class="nav-link" href="logout.php">📒 Logout</a>
+               <a class="nav-link" href="<?= BASE_URL ?>auth/logout.php">📒 Logout</a>
             </nav>
             <div class="mt-auto text-center mb-3">
                 <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="48" alt="Profile">

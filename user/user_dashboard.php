@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once(__DIR__ . '/../includes/database.php');
+require_once(__DIR__ . '/../includes/config.php');
 
 if (!isset($_SESSION['User_ID']) || $_SESSION['Role'] !== 'user') { header('Location: login.php'); exit(); }
 
@@ -125,7 +126,7 @@ $availBirds = $pdo->query("
                 <a href="user_placeorder.php" class="btn btn-warning dashboard-btn">🛒 Place Order</a>
                 <a href="user_orders.php" class="btn btn-success dashboard-btn">📦 My Orders</a>
                 <a href="user_address.php" class="btn address-btn dashboard-btn">🏠 My Addresses</a>
-                <a href="logout.php" class="btn btn-danger dashboard-btn">🚪 Logout</a>
+                <a href="../auth/logout.php" class="btn btn-danger dashboard-btn">🚪 Logout</a>
             </div>
         </div>
         <div class="mt-4 text-center" style="font-size:1.3rem; font-weight:600; letter-spacing:1px;">

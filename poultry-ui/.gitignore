@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 includes/config.php
 .env
+includes/secret.php
