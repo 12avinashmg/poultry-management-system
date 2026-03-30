@@ -7,7 +7,8 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require_once __DIR__ . '/includes/database.php';   // $pdo PDO
-require_once __DIR__ . '/includes/config.php';     // optional GEMINI_* if you add AI later
+require_once __DIR__ . '/includes/config.php'; 
+require_once(__DIR__ . '/secret.php');    // optional GEMINI_* if you add AI later
 session_start();
 
 header('Content-Type: application/json; charset=utf-8');
