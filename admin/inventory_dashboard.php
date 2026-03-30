@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'includes/database.php';
+require_once(__DIR__ . '/../includes/database.php');
 if (!isset($_SESSION['User_ID']) || $_SESSION['Role'] !== 'admin') {
     header('Location: login.php');
     exit();
@@ -71,7 +71,7 @@ if ($feedRemaining < 0) $feedRemaining = 0;
         <div class="col-md-1"><div class="alert alert-secondary text-center"><b>Feed Remain</b><br><?php echo $feedRemaining; ?> kg</div></div>
     </div>
     <div class="mt-4">
-        <a href="admin_dashboard.php" class="btn btn-link">← Back to Admin Dashboard</a>
+        <a href="../admin/admin_dashboard.php" class="btn btn-link">← Back to Admin Dashboard</a>
     </div>
 </div>
 <script>

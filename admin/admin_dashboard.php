@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'includes/database.php';
+require_once(__DIR__ . '/../includes/database.php');
 if (!isset($_SESSION['User_ID']) || $_SESSION['Role'] !== 'admin') { header('Location: login.php'); exit(); }
 
 // --- EMPLOYEE PAYROLL DATA (we keep it for later pages even if we don't show chart here) ---

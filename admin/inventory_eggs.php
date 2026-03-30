@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'includes/database.php';
+require_once(__DIR__ . '/../includes/database.php');
 if (!isset($_SESSION['User_ID']) || $_SESSION['Role'] !== 'admin') { header('Location: login.php'); exit(); }
 
 // --- Fixed Egg Price per Egg ---
@@ -214,7 +214,7 @@ $sales = $pdo->query("SELECT * FROM orders WHERE Type='egg' ORDER BY OrderDate D
         </div>
     </div>
     <div class="text-center mt-4">
-        <a href="admin_dashboard.php" class="btn btn-link fs-5">← Back to Admin Dashboard</a>
+        <a href="../admin/admin_dashboard.php" class="btn btn-link fs-5">← Back to Admin Dashboard</a>
     </div>
 </div>
 </body>

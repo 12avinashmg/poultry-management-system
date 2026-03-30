@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'includes/database.php'; // your existing DB file
+require_once(__DIR__ . '/../includes/database.php'); // your existing DB file
 
 if (!isset($_SESSION['User_ID']) || $_SESSION['Role'] !== 'admin') {
     header('Location: login.php');
@@ -194,6 +194,9 @@ body {
         <div class="chart-container">
             <canvas id="bioChart"></canvas>
         </div>
+    </div>
+    <div class="text-center mt-4">
+        <a href="admin_dashboard.php" class="btn btn-link fs-5">← Back to Dashboard</a>
     </div>
 </div>
 

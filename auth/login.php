@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'includes/database.php';
+require_once(__DIR__ . '/../includes/database.php');
 
 $message = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,9 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["Username"] = $user["Username"];
         $_SESSION["Role"] = $user["Role"];
         if ($user["Role"] === "admin") {
-            header("Location: admin_dashboard.php");
+            header("Location: ../admin/admin_dashboard.php");
         } else {
-            header("Location: user_dashboard.php");
+            header("Location: ../user/user_dashboard.php");
         }
         exit();
     } else {

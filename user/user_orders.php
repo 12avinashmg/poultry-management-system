@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'includes/database.php';
+require_once(__DIR__ . '/../includes/database.php');
 if (!isset($_SESSION['User_ID']) || $_SESSION['Role'] !== 'user') { header('Location: login.php'); exit(); }
 $user_id = $_SESSION['User_ID'];
 $orders = $pdo->prepare("SELECT * FROM orders WHERE User_ID=? ORDER BY OrderDate DESC");
