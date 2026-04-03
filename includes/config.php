@@ -1,5 +1,4 @@
 <?php
-require_once(__DIR__ . '/secret.php');
 
 // Model
 define("GEMINI_MODEL", "gemini-pro");
